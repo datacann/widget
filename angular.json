@@ -49,7 +49,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "widget:build"
+            "buildTarget": "widget:build:development"
           }
         },
         "server": {
@@ -62,5 +62,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e6e2fe2d-4df2-406b-8ee6-70da8ac272c6"
   }
 }
