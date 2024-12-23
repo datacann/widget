@@ -1,0 +1,26 @@
+<div class="popup-placement" >
+  <div class="scroll-container card mb-3 card-container ">
+    <div class="card-body" *ngFor="let item of filteredData; trackBy: trackByItem" (click)="selectItem(item)">
+      <div class="ata ml-2" [ngClass]="{'selected-card': isSelected(item)}">
+        <div class="d-flex justify-content-space-between">
+          <div class="flex-column">
+            <span class="popup-text">Sıcaklık ve Nem Sensörü</span>
+            <span class="popup-text-place section-text mt-2">{{item.bolum}}</span>
+          </div>
+          <img [src]="getBatteryIcon(item.pil_degeri)" alt="Battery Icon" class="battery-icon">
+        </div>
+        <div class="d-flex esse">
+          <img src="assets/degree.svg" alt="Icon">
+          <span class="popup-font">{{ item.sicaklik }} °C</span>
+          <img src="assets/nem.svg" alt="Icon">
+          <span class="popup-font">% {{ item.nem }}</span>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span class="date mt-2">{{item.tarih  | date: 'dd/MM/yyyy HH:mm:ss' }}</span>
+          <img src="assets/degree-circle.svg" alt="Icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
