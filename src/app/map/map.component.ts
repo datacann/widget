@@ -191,4 +191,6 @@ export class MapComponent implements AfterViewInit, OnInit, OnDestroy {
   private deselectItem() {
     this.selectedItemService.setSelectedItem(null);
   }
+
+
 }

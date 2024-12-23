@@ -21,7 +21,6 @@ export class PopupContentComponent implements OnChanges{
   @Input() section!: string ;
   @Input() temperature!: number ;
   @Input() humidity!: number ;
-  headerText: string = 'Nem ve Sıcaklık Sensörü';
   activeButton: string = '';
   headerTitle: string = 'Nem ve Sıcaklık Sensörü';
   headerAction: string = '';
